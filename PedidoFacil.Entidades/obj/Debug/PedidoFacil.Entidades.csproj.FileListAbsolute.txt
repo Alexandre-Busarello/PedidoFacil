@@ -1,0 +1,8 @@
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\obj\Debug\pedidofacil.dll
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\obj\Debug\pedidofacil.pdb
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\bin\Debug\pedidofacil.dll
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\bin\Debug\pedidofacil.pdb
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\PedidoFacil.Entidades\bin\Debug\pedidofacil.dll
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\PedidoFacil.Entidades\bin\Debug\pedidofacil.pdb
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\PedidoFacil.Entidades\obj\Debug\pedidofacil.dll
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\PedidoFacil.Entidades\obj\Debug\pedidofacil.pdb

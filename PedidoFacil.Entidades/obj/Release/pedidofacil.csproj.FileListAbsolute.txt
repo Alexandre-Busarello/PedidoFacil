@@ -1,0 +1,4 @@
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\bin\Release\pedidofacil.dll
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\bin\Release\pedidofacil.pdb
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\obj\Release\pedidofacil.dll
+C:\Users\alexandre.busarello\Documents\Projects\PedidoFacil\pedidofacil\obj\Release\pedidofacil.pdb
