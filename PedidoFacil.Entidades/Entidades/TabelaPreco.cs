@@ -11,8 +11,8 @@ namespace PedidoFacil.Entidades
 		public Representada Representada { get; set; }
 		public String Codigo { get; set; }
 		public String Descricao { get; set; }
-		public DateTime DataInicio { get; set; }
-		public DateTime DataValidade { get; set; }
+		public DateTime? DataInicio { get; set; }
+		public DateTime? DataValidade { get; set; }
 		public bool Ativo { get; set; }
 		public ICollection<ItemTabelaPreco> ItensProduto 
 		{

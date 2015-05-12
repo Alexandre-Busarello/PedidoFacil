@@ -103,6 +103,14 @@
     <Compile Include="Base\IRepositorio.cs" />
     <Compile Include="Base\Repositorio.cs" />
     <Compile Include="Repositorios\RepresentadaRepositorio.cs" />
+    <Compile Include="Repositorios\PedidoRepositorio.cs" />
+    <Compile Include="Repositorios\ComissaoRepositorio.cs" />
+    <Compile Include="Repositorios\ClienteRepositorio.cs" />
+    <Compile Include="Repositorios\VendendorRepositorio.cs" />
+    <Compile Include="Repositorios\TabelaPrecoRepositorio.cs" />
+    <Compile Include="Repositorios\ProdutoRepositorio.cs">
+      <DependentUpon>RepresentadaRepositorio.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

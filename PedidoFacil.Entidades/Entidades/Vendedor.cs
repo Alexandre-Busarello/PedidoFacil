@@ -9,6 +9,7 @@ namespace PedidoFacil.Entidades
 		public String Nome { get; set; }
 		public String Cpf { get; set; }
         public Endereco Endereco { get; set; }
+		public Double PercentualComissao { get; set; }
 		public bool Ativo { get; set; }
 
 		public Vendedor (String nome, String cpf)

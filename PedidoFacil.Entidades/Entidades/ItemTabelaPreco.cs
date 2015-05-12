@@ -6,6 +6,7 @@ namespace PedidoFacil.Entidades
 	{
         public int ID { get; set; }
 		public Produto Produto { get; set; }
+		public TabelaPreco TabelaPreco { get; set; }
 		public Double QuantidadeMinima { get; set; }
 		public Double PrecoUnitario { get; set; }
 		public bool Ativo { get; set; }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using pedidofacil.ef.Migrations;
 using System.Data.Entity.Migrations;
 using PedidoFacil.DAL.Repositorios;
+using PedidoFacil.Entidades;
+using PedidoFacil.DAL;
 
 namespace pedidofacil.ef
 {
@@ -44,6 +46,60 @@ namespace pedidofacil.ef
 			}
 				
 			RepresentadaRepositorio repRepresentadas = new RepresentadaRepositorio ();
+
+			ClienteRepositorio cliRep = new ClienteRepositorio ();
+			Cliente cliente = new Cliente ("Alexandre", "07063272926", repRepresentadas.Find (1));			
+			cliente.Documento = "07063272926";
+			cliente.Endereco.Logradouro = "Rua Fraiburgo";
+			cliente.Endereco.Numero = 373;
+			cliRep.Adicionar (cliente);
+
+			VendendorRepositorio venRep = new VendendorRepositorio ();
+			Vendedor vendedor = new Vendedor ("Juquinha", "857487");
+			vendedor.Endereco.Logradouro = "Sei la";
+			vendedor.Endereco.Numero = 10;
+			vendedor.PercentualComissao = 10;
+			vendedor.Ativo = true;
+			venRep.Adicionar (vendedor);
+
+			ProdutoRepositorio proRep = new ProdutoRepositorio ();
+			Produto produto = new Produto (repRepresentadas.Find (1));
+			produto.Descricao = "Fogão Dako";
+			produto.Detalhes = "Dako é bom";
+			produto.PercentualIpi = 15;
+			proRep.Adicionar (produto);
+				
+			TabelaPrecoRepositorio tabPreRep = new TabelaPrecoRepositorio ();
+			TabelaPreco tabPreco = new TabelaPreco (produto.Representada);
+			tabPreco.Descricao = "TAB001";
+			//tabPreco.DataInicio = DateTime.Now;
+			//tabPreco.DataValidade = DateTime.Now.AddYears(1);
+			tabPreco.AdicionarItem (produto, 150);
+			tabPreRep.Adicionar (tabPreco);
+
+			cliRep.SalvarTodos ();
+			venRep.SalvarTodos ();
+			proRep.SalvarTodos ();
+			tabPreRep.SalvarTodos ();
+
+			Pedido pedido = new Pedido();
+			pedido.Representada = produto.Representada;
+			pedido.Cliente = cliente;
+			pedido.Vendedor = vendedor;
+			pedido.TabelaPreco = tabPreco;
+			pedido.AdicionarItem (produto, 5);
+
+			PedidoRepositorio pedRep = new PedidoRepositorio ();
+			pedRep.Adicionar (pedido);
+			pedRep.SalvarTodos ();
+
+			pedido.FecharPedido ();
+			pedRep.Atualizar (pedido);
+
+			ComissaoRepositorio comRep = new ComissaoRepositorio ();
+			comRep.GerarComissao (pedido);
+			comRep.SalvarTodos ();
+
 			System.Console.WriteLine (" ");
 			System.Console.WriteLine (" ");
 			System.Console.WriteLine("=======  representadas cadastradas ===========");

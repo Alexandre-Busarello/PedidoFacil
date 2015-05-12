@@ -8,16 +8,17 @@ namespace PedidoFacil.Entidades
 	{
 		private List<ItemPedido> _itensProduto { get; set; }
 
-        public int Id { get; set; }
+        public int ID { get; set; }
 		public Representada Representada { get; set; }
 		public Cliente Cliente { get; set; }
 		public Vendedor Vendedor { get; set; }
 		public TabelaPreco TabelaPreco { get; set; }
 		public DateTime DataDigitacao { get; set; }
-		public DateTime DataEmissao { get; set; }
+		public DateTime? DataEmissao { get; set; }
 		public StatusEnum Status { get; set; }
 		public Double ValorTotal { get; set; }
 		public Double ValorTotalIpi { get; set; }
+		public ICollection<ItemPedido> ItensProduto { get { return _itensProduto; } }
 
         private void iniciarPedido()
         {
@@ -27,6 +28,7 @@ namespace PedidoFacil.Entidades
 
         public Pedido()
         {
+			_itensProduto = new List<ItemPedido> ();
             iniciarPedido();
         }
 

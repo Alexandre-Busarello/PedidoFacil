@@ -17,6 +17,7 @@ namespace PedidoFacil.DAL
         public DbSet<Vendedor> Vendedores { get; set; }
         public DbSet<TabelaPreco> TabelasPreco { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
+		public DbSet<Comissao> Comissoes { get; set; }
 
         public PedidoFacilContexto()
         {

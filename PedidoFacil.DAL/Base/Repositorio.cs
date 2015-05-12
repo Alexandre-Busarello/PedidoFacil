@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Linq;
 using System.Data.Entity;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace PedidoFacil.DAL.Base
 {
 	public abstract class Repositorio<TEntity> : IDisposable, IRepositorio<TEntity> where TEntity : class
 	{
-		PedidoFacilContexto ctx = new PedidoFacilContexto();
+	    PedidoFacilContexto ctx = new PedidoFacilContexto();
+
+		public static IList<T> CastToList<T>(IEnumerable source)
+		{
+			return new List<T>(source.Cast<T>());
+		}
+
 
 		public IQueryable<TEntity> GetAll()
 		{
