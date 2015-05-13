@@ -11,7 +11,7 @@ namespace pedidofacil.ef.Migrations
         {
             AutomaticMigrationsEnabled = true;
 			AutomaticMigrationDataLossAllowed = true;
-            ContextKey = "pedidofacil.ef.PedidoFacilContext";
+            ContextKey = "PedidoFacil.DAL.PedidoFacilContexto";
         }
 
 		protected override void Seed(PedidoFacil.DAL.PedidoFacilContexto context)

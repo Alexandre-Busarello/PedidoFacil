@@ -4,7 +4,7 @@ using PedidoFacil.Entidades;
 using PedidoFacil.Entidades.Complementares;
 using System.Collections.Generic;
 
-namespace PedidoFacil.DAL
+namespace PedidoFacil.DAL.Repositorios
 {
 	public class PedidoRepositorio : Repositorio<Pedido>
 	{

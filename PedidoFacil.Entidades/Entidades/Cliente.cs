@@ -8,7 +8,7 @@ namespace PedidoFacil.Entidades
 		private InformacoesFiscais _informacoesFiscais = new InformacoesFiscais();
 
         public int ID { get; set; }
-		public Representada Representada { get; set; }
+		public virtual Representada Representada { get; set; }
 		public String Nome { get; set; }
 		public String NomeAbreviado { get; set; }
 		public String Documento { get; set; }
@@ -21,6 +21,11 @@ namespace PedidoFacil.Entidades
 			get { return _informacoesFiscais.TributaIpi; }
 			set { _informacoesFiscais.TributaIpi = value; }
 		}
+
+        public Cliente()
+        {
+
+        }
 
 		public Cliente (String nome, String documento, Representada representada)
 		{

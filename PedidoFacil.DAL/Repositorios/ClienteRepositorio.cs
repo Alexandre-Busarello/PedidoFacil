@@ -2,7 +2,7 @@
 using PedidoFacil.DAL.Base;
 using PedidoFacil.Entidades;
 
-namespace PedidoFacil.DAL
+namespace PedidoFacil.DAL.Repositorios
 {
 	public class ClienteRepositorio : Repositorio<Cliente>
 	{

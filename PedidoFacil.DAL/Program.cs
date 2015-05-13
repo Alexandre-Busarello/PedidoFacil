@@ -44,7 +44,21 @@ namespace pedidofacil.ef
 				System.Console.WriteLine ("   2. Sair;");
 				key = System.Console.ReadKey ();
 			}
-				
+
+            using (var ctx = new PedidoFacilContexto())
+            {
+                Representada r = new Representada();
+                r.Nome = "Alexandre";
+                r.Cnpj = "122487488";
+                r.Endereco.Logradouro = "Rua Fraiburgo, 373";
+                r.Endereco.Numero = 373;
+                r.Endereco.Municipio = "Blumenau";
+
+                ctx.Representadas.Add(r);
+                ctx.SaveChanges();
+            }
+
+            /*
 			RepresentadaRepositorio repRepresentadas = new RepresentadaRepositorio ();
 
 			ClienteRepositorio cliRep = new ClienteRepositorio ();
@@ -99,7 +113,7 @@ namespace pedidofacil.ef
 			ComissaoRepositorio comRep = new ComissaoRepositorio ();
 			comRep.GerarComissao (pedido);
 			comRep.SalvarTodos ();
-
+           
 			System.Console.WriteLine (" ");
 			System.Console.WriteLine (" ");
 			System.Console.WriteLine("=======  representadas cadastradas ===========");
@@ -107,6 +121,7 @@ namespace pedidofacil.ef
 			{
 				System.Console.WriteLine("{0} - {1} - {2} - {3}", r.ID, r.Nome, r.Cnpj, r.Endereco.Logradouro);
 			}
+             * /
 
 			/*
             using (var ctx = new PedidoFacilContexto())

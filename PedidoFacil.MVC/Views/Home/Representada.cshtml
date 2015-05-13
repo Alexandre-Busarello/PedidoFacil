@@ -1,0 +1,18 @@
+﻿@model ICollection<PedidoFacil.Entidades.Representada>
+
+@{
+    ViewBag.Title = "Representada";
+}
+
+<h2>Representadas</h2>
+<br/>
+@foreach (PedidoFacil.Entidades.Representada item in Model)
+{
+    <p>@(item.Nome + " - " + item.Cnpj)</p>
+ 
+    <h3>Endereço:</h3>
+    <p>Rua: @(item.Endereco.Logradouro + ", " + item.Endereco.Numero)</p>
+    <p>Bairro: @item.Endereco.Bairro</p>
+    <p>Cidade: @item.Endereco.Municipio</p>
+}
+

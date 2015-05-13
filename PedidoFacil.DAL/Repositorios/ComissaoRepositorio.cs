@@ -3,7 +3,7 @@ using PedidoFacil.Entidades;
 using PedidoFacil.DAL.Base;
 using System.Collections.Generic;
 
-namespace PedidoFacil.DAL
+namespace PedidoFacil.DAL.Repositorios
 {
 	public class ComissaoRepositorio : Repositorio<Comissao>
 	{
